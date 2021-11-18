@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Payroll.jnlp">
+  <information>
+    <title>Payroll</title>
+    <vendor>Unknown</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Payroll.jar" size="31864" download="eager" />
+    <jar href="lib\jaybird-full-2.2.3.jar" size="847127" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.27.jar" size="2475087" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="payroll.Payroll"  name="Payroll" />
+  <update check="always"/>
+</jnlp>

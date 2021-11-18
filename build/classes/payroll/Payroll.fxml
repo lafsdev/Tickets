@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="825.0" prefWidth="853.0" style="-fx-background-color: #000000" stylesheets="@../LCTech/DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payroll.PayrollController">
+    <children>
+        <TableView fx:id="table" layoutX="6.0" layoutY="192.0" onMouseClicked="#onTableClick" onMouseExited="#onTableExit" prefHeight="626.0" prefWidth="835.0">
+            <columns>
+                <TableColumn fx:id="tc_id" editable="false" prefWidth="127.0" text="Código" />
+                <TableColumn fx:id="tc_name" editable="false" prefWidth="625.0" text="Nome" />    
+            </columns>
+        </TableView>
+        <TextField fx:id="tx_name" layoutX="147.0" layoutY="102.0" prefHeight="37.0" prefWidth="648.0" promptText="Produto">           <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="107.0" prefHeight="27.0" prefWidth="122.0" styleClass="label-bright" text="Produto" textFill="#f5efef">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnReport" disable="true" layoutX="691.0" layoutY="147.0" mnemonicParsing="false" onAction="#onButtonReport" text="Imprimir" textAlignment="CENTER" />
+        <Spinner fx:id="sp_qtd" layoutX="575.0" layoutY="145.0" max="99" min="1" prefHeight="37.0" prefWidth="104.0" />
+        <VBox prefHeight="37.0" prefWidth="853.0">
+            <children>
+                <MenuBar prefHeight="35.0" prefWidth="823.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Arquivo">
+                            <items>
+                                <MenuItem id="btnProducts" mnemonicParsing="false" onAction="#onNewProduct" text="Cadastro de Produtos" />
+                                <MenuItem fx:id="btnClose" mnemonicParsing="false" onAction="#onButtonClose" text="Sair" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Sobre">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+      <StackPane layoutX="51.0" layoutY="41.0" prefHeight="70.0" prefWidth="744.0">   
+          <TextField fx:id="searchBox" onMouseClicked="#onSearchBoxClick" prefHeight="37.0" prefWidth="801.0" promptText="Pesquisa de Produtos" styleClass="transparent" />
+      </StackPane>
+    </children>
+</AnchorPane>
